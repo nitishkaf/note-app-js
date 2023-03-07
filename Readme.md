@@ -1,0 +1,9 @@
+# Checklist For a Note App
+
+1. Create a constant variable for the "Add Note" button and assign it the DOM element that has an ID attribute of "add"
+2. Add an event listener to the "Add Note" button for the "click" event, which calls the addNewNote function.
+3. Define the `addNewNote` function, which creates a new note element and appends it to the body of the document. The function takes an optional text parameter which defaults to an empty string.
+4. In the `addNewNote` function, create a new div element for the note and add a class of "note" to it.
+5. In the `addNewNote` function, set the innerHTML property of the note element to a template literal string that contains the HTML for the note, including a "tools" section with buttons for editing and deleting the note, a "main" section for displaying the note text, and a textarea element for editing the note text.
+6. In the `addNewNote` function, add event listeners to the edit and delete buttons for the note. When the delete button is clicked, the note should be removed from the DOM and the updateLS function should be called to update `localStorage` with the current notes. When the edit button is clicked, the "main" section of the note should be toggled to "hidden" and the textarea element should be shown, allowing the user to edit the note text. When the edit button is clicked again, the textarea element should be hidden and the "main" section should be updated with the edited text, and the updateLS function should be called to update localStorage with the current notes.
+7. In the addNewNote function, find the textarea element and set its value to the current note text. Add an event listener to the textarea element for the "input" event, which updates the "main" section of the note with the marked-up version of the edited text and calls the updateLS function to update localStorage with the current notes.
